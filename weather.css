@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans&family=Lobster&family=Montserrat+Subrayada:wght@700&family=Moon+Dance&family=Oswald:wght@500;600;700&family=Pacifico&family=Padyakke+Expanded+One&family=Poppins&family=Rowdies:wght@700&family=Rubik+Gemstones&family=Signika&family=Sofia+Sans&family=Teko:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./img/gray-clouds-during-daytime.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 5s;
+
+    animation-name: animate ;
+    animation-direction:alternate-reverse ;
+    animation-duration:30s ;
+    animation-fill-mode:forwards ;
+    animation-iteration-count:infinite ;
+    animation-play-state:running ;
+    animation-timing-function: ease-in-out;
+
+
+}
+
+.weather-app{
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    /* height: 105px; */
+    background: #fff;
+    padding: 28px 32px;
+    /* overflow: hidden; */
+    /* border-radius: 18px; */
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-out;
+}
+
+.search-box{
+    width: 100%;
+    /* border: #b2d8e7 solid 2px; */
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-box input{
+    color: #06283d;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 32px;
+    border: #b2d8e7 solid 2px;
+    border-radius: 20px;
+}
+
+.search-box input::placeholder{
+    font-size: 20px;
+    font-weight: 500;
+    color: #06283d;
+    text-transform: capitalize;
+    opacity: 0.5;
+}
+
+.search-box i{
+    font-size: small;
+}
+
+.search-box button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283d;
+    background: #dff6ff;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+.search-box button:hover{
+    color: #fff;
+    background: #06283d;
+}
+
+.search-box i{
+    position: absolute;
+    color: #06283d;
+    font-size: 28px;
+    margin-left: 8px;
+}
+
+.search-box{
+    text-align: center;
+}
+
+/* weather box */
+
+.weather-box{
+    /* position: relative; */
+    width: 400px;
+    background: white;
+    opacity: 50%;
+    /* padding: 28px 32px;  */
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-out; 
+    border: 1px solid white;
+    border-radius: 20px;
+} 
+
+.city{
+    text-align: center;
+    /* font-family: 'Oswald', sans-serif; */
+
+    font-family: 'Playfair Display', serif;
+    padding-top: 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+
+
+}
+.city i{
+    color: rgb(27, 19, 58);
+    margin-right: 5px;
+}
+
+.temp{
+    text-align: center;
+    padding-top: 40px;
+    font-family: 'Playfair Display', serif;
+    color: #06283d;
+}
+
+.desc{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    opacity: 0.5;
+    font-weight: 500;
+    color: #06283d;
+}
+
+hr{
+    padding-top: 40px;
+    opacity: 0.2;
+    color: #06283d;
+}
+
+.hum{
+    margin-right: 280px;
+    float: right;
+    font-size: small;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+    color: #06283d;
+}
+
+.wind{
+    margin-right: 240px;
+    font-size: small;
+    
+    float: right;
+    font-family: 'Playfair Display', serif;
+    color: #06283d;
+}
+
+img{
+    height: 90px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+        
+}
+
+.count{
+    float: right;
+    margin-right: 20px;
+    display: grid;
+}
+@keyframes animate{
+   0% {
+    background-image: url(./img/gray-clouds-during-daytime.jpg);
+   }
+   20% {
+    background-image: url(./img/2.jpg);
+   }
+   40% {
+    background-image: url(./img/1.jpg);
+   }
+   60% {
+    background-image: url(./img/4.jpg);
+   }
+   80% {
+    background-image: url(./img/3.jpg);
+   }
+   100% {
+    background-image: url(./img/5.jpg);
+   }
+}
+#app{
+    position: absolute;
+    top: 8%;
+    justify-items: center;
+    
+    font-size: 60px;
+    font-weight: 600;
+}
+#time{
+    position: absolute;
+    top: 30%;
+    justify-items: center;
+    margin-left: 70px;
+    font-size: 40px;
+    font-weight: 400;
+    color: black;
+}
